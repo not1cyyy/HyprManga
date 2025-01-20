@@ -15,6 +15,14 @@ This repository contains my Hyprland dotfiles, themed around a manga-inspired ae
 
 ## Installation
 
+### Automatic Install
+
+You can install HyprManga automatically by running the following command:
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/not1cyyy/HyprManga/main/INSTALL.sh)"
+```
+## Manual Install
+
 ### Backup Existing Configurations
 
 Before proceeding, make sure to back up your existing configurations. You can do this by moving them to a backup directory:

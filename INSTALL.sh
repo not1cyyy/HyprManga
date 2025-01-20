@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# HyprManga Installation Script
+# -----------------------------
+# This script installs yay, required packages, and force copies dotfiles from the HyprManga repository.
+# It is designed to be executed remotely using:
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/not1cyyy/HyprManga/main/INSTALL.sh)"
+
 # Set up error handling
 set -euo pipefail
 
@@ -56,7 +62,7 @@ done
 
 # Step 5: Force copy dotfiles
 print_message "Force copying dotfiles..."
-for config in hypr hyprpaper rofi alacritty kitty nautilus; do
+for config in hypr hyprpaper hyprpanel rofi alacritty kitty nautilus; do
     if [ -d "$DOTFILES_DIR/$config" ]; then
         cp -rf "$DOTFILES_DIR/$config" "$HOME/.config/" || handle_error "Failed to copy $config."
     else
@@ -75,5 +81,8 @@ echo "Backups of existing configurations are stored in $BACKUP_DIR."
 
 # Step 8: Rebooting the system
 print_message "Rebooting the system in 5 seconds..."
-sleep 5
+for i in {5..1}; do
+    echo -ne "Rebooting in $i seconds...\r"
+    sleep 1
+done
 sudo reboot
