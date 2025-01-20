@@ -34,7 +34,7 @@ fi
 
 # Step 2: Install required packages using yay
 print_message "Installing required packages using yay..."
-yay -S --needed --noconfirm git hyprland hyprpaper hyprpanel rofi neovim alacritty kitty nautilus || handle_error "Failed to install packages."
+yay -S --needed --noconfirm git hyprland hyprpaper hyprpanel rofi alacritty kitty nautilus || handle_error "Failed to install packages."
 
 # Step 3: Clone the dotfiles repository
 print_message "Cloning dotfiles repository..."
@@ -48,7 +48,7 @@ fi
 # Step 4: Backup existing configurations
 print_message "Backing up existing configurations..."
 mkdir -p "$BACKUP_DIR"
-for config in hypr hyprpaper hyprpanel rofi nvim alacritty kitty nautilus; do
+for config in hypr hyprpaper hyprpanel rofi alacritty kitty nautilus; do
     if [ -d "$HOME/.config/$config" ]; then
         mv "$HOME/.config/$config" "$BACKUP_DIR/$config" || handle_error "Failed to backup $config."
     fi
@@ -56,7 +56,7 @@ done
 
 # Step 5: Force copy dotfiles
 print_message "Force copying dotfiles..."
-for config in hypr hyprpaper rofi nvim alacritty kitty nautilus; do
+for config in hypr hyprpaper rofi alacritty kitty nautilus; do
     if [ -d "$DOTFILES_DIR/$config" ]; then
         cp -rf "$DOTFILES_DIR/$config" "$HOME/.config/" || handle_error "Failed to copy $config."
     else
