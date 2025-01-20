@@ -2,9 +2,12 @@
 
 ## Screenshots
 
-[Screenshot 1](screenshots/screenshot1.png)
-[Screenshot 2](screenshots/screenshot2.png)
-[Screenshot 3](screenshots/screenshot3.png)
+![image](https://github.com/user-attachments/assets/4b698c1f-08a5-427a-90b3-6fe11c9b457b)
+![image](https://github.com/user-attachments/assets/a8c044e4-aa88-413f-bb74-3b90d8a53bf4)
+![image](https://github.com/user-attachments/assets/93f5d3cc-5c23-4c04-b5b5-3ad24d5a2ef1)
+![image](https://github.com/user-attachments/assets/44f868b9-d16c-4b29-8b26-7241c0e5953e)
+
+
 
 ## Overview
 
@@ -29,17 +32,17 @@ mv ~/.config/kitty ~/.config-backup/kitty
 
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-username/hyprland-manga-dotfiles.git ~/.config/hyprland-manga-dotfiles
+git clone https://github.com/not1cyyy/HyprManga.git ~/.config/HyprManga
 ```
 Force copy the new configurations to their respective locations:
 ```bash
-cp -rf ~/.config/hyprland-manga-dotfiles/hypr ~/.config/hypr
-cp -rf ~/.config/hyprland-manga-dotfiles/hyprpanel ~/.config/hyprpanel
-cp -rf ~/.config/hyprland-manga-dotfiles/rofi ~/.config/rofi
-cp -rf ~/.config/hyprland-manga-dotfiles/nautilus ~/.config/nautilus
-cp -rf ~/.config/hyprland-manga-dotfiles/nvim ~/.config/nvim
-cp -rf ~/.config/hyprland-manga-dotfiles/alacritty ~/.config/alacritty
-cp -rf ~/.config/hyprland-manga-dotfiles/kitty ~/.config/kitty
+cp -rf ~/.config/HyprManga/dotconfig/hypr ~/.config/hypr
+cp -rf ~/.config/HyprManga/dotconfig/hyprpanel ~/.config/hyprpanel
+cp -rf ~/.config/HyprManga/dotconfig/rofi ~/.config/rofi
+cp -rf ~/.config/HyprManga/dotconfig/nautilus ~/.config/nautilus
+cp -rf ~/.config/HyprManga/dotconfig/nvim ~/.config/nvim
+cp -rf ~/.config/HyprManga/dotconfig/alacritty ~/.config/alacritty
+cp -rf ~/.config/HyprManga/dotconfig/kitty ~/.config/kitty
 ```
 ## Customization
 
