@@ -1,0 +1,2 @@
+# HyprManga
+Hyprland Manga dotfiles
