@@ -63,8 +63,8 @@ done
 # Step 5: Force copy dotfiles
 print_message "Force copying dotfiles..."
 for config in hypr hyprpaper hyprpanel rofi alacritty kitty nautilus; do
-    if [ -d "$DOTFILES_DIR/$config" ]; then
-        cp -rf "$DOTFILES_DIR/$config" "$HOME/.config/" || handle_error "Failed to copy $config."
+    if [ -d "$DOTFILES_DIR/dotconfig/$config" ]; then
+        cp -rf "$DOTFILES_DIR/dotconfig/$config" "$HOME/.config/" || handle_error "Failed to copy $config."
     else
         echo "Warning: $config directory not found in dotfiles repository. Skipping..."
     fi
